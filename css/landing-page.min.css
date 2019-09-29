@@ -17,7 +17,7 @@ h2 {
 }
 
 @import url('https://fonts.googleapis.com/css?family=Bungee&display=swap');
-h1 {
+h1,h5 {
     font-family: 'Consolas', cursive;
     font-weight: bold;
     border-radius: 25px;
@@ -26,7 +26,7 @@ h1 {
 }
 
 h4,
-h5,
+
 h6 {
     font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700
