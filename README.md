@@ -1,6 +1,6 @@
 # Music Leaker - ỨNG DỤNG TÌM KIẾM ÂM NHẠC MIỄN PHÍ - FREE FINDING SONG INTERNET
 
-## Ngôn ngữ chính PHP  ##
+## Ngôn ngữ chính PHP, HTML, Javascripts, Bootstrap 4  ##
 
 [![vqyDqU.png](https://b.imge.to/2019/09/29/vqyDqU.png)](https://imge.to/i/vqyDqU)
 
