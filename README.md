@@ -1,4 +1,4 @@
-# Music Leaker - ỨNG DỤNG TÌM KIẾM ÂM NHẠC MIỄN PHÍ - FREE FINDING SONG INTERNET
+# Music Leaker - ỨNG DỤNG WEB TÌM KIẾM ÂM NHẠC MIỄN PHÍ - FREE FINDING SONG INTERNET
 
 ## Ngôn ngữ chính PHP, HTML, Javascripts, Bootstrap 4  ##
 
