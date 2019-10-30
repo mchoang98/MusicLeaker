@@ -65,8 +65,12 @@
         <!-- Lấy key words tìm kiếm được truyền vào -->
         <?php
         $key = "";
-        if (!is_null($_GET["key"]) && !empty($_GET[key]) && strpos($_GET[key], 'http') !== false) {
+        $page = 1;
+        if (!is_null($_GET["key"]) && !empty($_GET["key"])) {
             $key = $_GET["key"];
+            // if (!is_null($_GET["page"]) && !empty($_GET["page"])) {
+            //     $page = $_GET["page"];
+            // }
         } else {
             header("Location: ./index.html");
             die();
@@ -76,91 +80,29 @@
 
         <!-- Phần chèn giá trị nếu có vào form search -->
         <form class="form-inline my-2 my-lg-0 ml-auto" action="./download.php" method="get">
-            <input class="form-control" type="search" placeholder="Link bài hát" aria-label="Link bài hát" value=<?php echo $key ?> name="key">
+            <input class="form-control" type="search" placeholder="Link bài hát" aria-label="Link bài hát" value="<?php echo $key ?>" name="key">
             <button class="btn btn-danger">Tìm kiếm</button>
         </form>
         <!-- Kết thúc phần chèn giá trị vào form search -->
     </nav>
-
-    <!-- Khu vực get info bài hát -->
+    <!-- Khu lấy danh sách các bài hát -->
     <?php
+    $resultKey = $key;
+    $str = "";
     if (!empty($key)) {
-        $str = file_get_contents($key);
-        /* Các thuộc tính cần thiết */
-        $gottedResult = "";
-        $songImage = "";
-        $songName = "";
-        $singer = "";
-
-        /* Kết thúc các thông tin cần thiết */
-
-        if (strlen($str) > 0) {
-            $str = trim(preg_replace('/\s+/', ' ', $str)); // supports line breaks inside <title>
-            if (preg_match("/\<title\>(.*)\<\/title\>/i", $str, $title)) // ignore case
-            {
-                $gottedResult = $title[1];
-                $tempArr = explode(" - ", $gottedResult);
-                if (count($tempArr) > 0) {
-                    // Nếu có tên bài hát
-                    $songName = trim(preg_replace('/\s+/', ' ', $tempArr[0]));
-                }
-                if (count($tempArr) > 1) {
-                    // Nếu có ca sỹ
-                    $singer = trim(preg_replace('/\s+/', ' ', $tempArr[1]));
-                }
-            } else {
-                // Nếu không lấy kiểu quân tử được, chơi sang kiểu tiểu nhân
-                $str = file_get_contents("https://www.google.com.vn/search?q=" . $key . "&hl=vi");
-                $str = preg_replace_callback('/\\\\u([0-9a-fA-F]{4})/', function ($match) {
-                    return mb_convert_encoding(pack('H*', $match[1]), 'UTF-8', 'UTF-16BE');
-                }, $str);
-                $subKey = preg_replace('/\//', '\/', $key);
-                $subKey = preg_replace('/\./', '\.', $subKey);
-                $str = trim(preg_replace('/\s+/', ' ', $str)); // supports line breaks
-                if (preg_match("/<a href=\"\/url\?q=" . $subKey . ".+?><div.+?>(.*?)<\/div>/i", $str, $title)) // ignore case
-                {
-                    $gottedResult = $title[1];
-                    $tempArr = explode(" - ", $gottedResult);
-                    if (count($tempArr) > 0) {
-                        // Nếu có tên bài hát
-                        $songName = trim(preg_replace('/\s+/', ' ', $tempArr[0]));
-                    }
-                    if (count($tempArr) > 1) {
-                        // Nếu có ca sỹ
-                        $singer = trim(preg_replace('/\s+/', ' ', $tempArr[1]));
-                    }
-                }
-            }
-        }
-
-        if (!empty($gottedResult)) {
-            $str = file_get_contents("https://www.google.com.vn/search?q=" . urlencode($gottedResult) . "&tbm=isch&hl=vi");
-            $str = trim(preg_replace('/\s+/', ' ', $str)); // supports line breaks
-            if (preg_match("/<a href=\"\/url\?q=.+\"><img .+src=\"(.*)\" w.+\"><\/a>/i", $str, $image)) // ignore case
-                $songImage = $image[1];
-        }
-    }
-    ?>
-    <!-- Kết thúc get info -->
-
-    <!-- Khu vự leak nhạc -->
-    <?php
-    static $fixedGetLinkUrl = 'http://getlink.songhanh.com.vn/index.php?link=';
-    if (!empty($key)) {
-        $songLink = "";
-        $str = file_get_contents($fixedGetLinkUrl . $key);
+        $str = file_get_contents("https://www.nhaccuatui.com/tim-kiem/bai-hat?q=" . urlencode($key) . "&b=keyword&l=tat-ca&s=default&page=1");
         $str = trim(preg_replace('/\s+/', ' ', $str)); // supports line breaks
-        if (preg_match("/<a target=.+href=\"{0,1}(.*)\"{0,1}?>.+?<\/a>/i", $str, $link)) // ignore case
+        $str = trim(preg_replace('/\n+/', ' ', $str)); // supports line breaks
+        if (preg_match("/<span>(\(Có [0-9,]+ kết quả\))<\/span>/i", $str, $count)) // ignore case
         {
-            $songLink = $link[1];
-        } else { }
+            $resultKey = $resultKey . " " . $count[1];
+        }
     }
     ?>
-    <!-- Kết thúc phần leak nhạc -->
 
     <div>
         <!--Body-->
-        <div id="small-info"> Kết quả cho: <?php echo $gottedResult ?></div>
+        <div id="small-info"> Kết quả cho: <?php echo $resultKey ?></div>
 
         <table class="table table-bordered table-danger">
             <thead class="table-dark">
@@ -173,17 +115,62 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td> <img class="imagesong" src=<?php echo $songImage ?> />
-                    </td>
-                    <td class="font-center"><?php echo $singer ?></td>
-                    <td><?php echo $songName ?></td>
-                    <td> <a class="btn btn-lg px-3 btn-info" href="#" role="button">Chia sẻ <img src="./images/share.png" height="30" alt="share button"></a>
-                    </td>
+                <!-- Khu lấy danh sách các bài hát -->
+                <?php
+                $contentData = "";
+                if (!empty($str)) {
+                    if (preg_match_all("/<li class=\"sn_search_single_song\">.*?<\/li>/m", $str, $matches, PREG_SET_ORDER, 0)) {
+                        foreach ($matches as $li) {
+                            $link = "";
+                            if (preg_match("/href=\"(.*?)\"/i", $li[0], $got)) {
+                                $link = $got[1];
+                            }
+                            $title = "";
+                            if (preg_match("/title=\"(.+?)\"/i", $li[0], $got)) {
+                                $title = $got[1];
+                            }
+                            $singer = "";
+                            if (preg_match("/<h4 class=\"singer_song\">(.*)<\/h4>/i", $li[0], $got)) {
+                                $singer = $got[1];
+                                $singer = preg_replace("/<a.+?>|<\/a>/", '', $singer);
+                            }
+                            $img = "";
+                            $mp3 = "";
+                            // Lấy thực tế
+                            $str = file_get_contents($link);
+                            $str = trim(preg_replace('/\s+/', ' ', $str)); // supports line breaks
+                            if (preg_match("/(https:\/\/www\.nhaccuatui\.com\/flash\/xml\?html5=true&key1=.*?)\";/i", $str, $got)) {
+                                $str = file_get_contents($got[1]);
+                                $str = trim(preg_replace('/\s+/', ' ', $str)); // supports line breaks
+                                //                                echo "<input type=\"text\" value=\"".$str."\"/>";
+                                if (preg_match("/<location>.?<!\[CDATA\[(.*?)]]>.?<\/location>.*<avatar>.?<!\[CDATA\[(.*?)]]>.?<\/avatar>/i", $str, $got)) {
+                                    if (!is_null($got[1]) && !empty($got[1]))
+                                        $mp3 = $got[1];
+                                    if (!is_null($got[2]) && !empty($got[2]))
+                                        $img = $got[2];
+                                    else
+                                        $img = './img/me.png';
+                                } else { }
 
-                    <td> <a class="btn btn-lg px-3 btn-info" href=<?php echo $songLink ?> role="button">Download <img src="./images/download-arrow.png" height="30" alt="share button"></a>
-                    </td>
-                </tr>
+                                // Combine data
+                                if (!empty($title) && !empty($singer) && !empty($img) && !empty($mp3)) {
+                                    $contentData =  $contentData . "<tr>";
+                                    $contentData =  $contentData . "<td> <img class=\"imagesong\" src=" . $img . ">";
+                                    $contentData =  $contentData . "</td>";
+                                    $contentData =  $contentData . "<td class=\"font-center\">" . $singer . "</td>";
+                                    $contentData =  $contentData . "<td>" . $title . "</td>";
+                                    $contentData =  $contentData . "<td> <a class=\"btn btn-lg px-3 btn-info\" href=\"#\" role=\"button\">Chia sẻ <img src=\"./images/share.png\" height=\"30\" alt=\"share button\"></a>";
+                                    $contentData =  $contentData . "</td>";
+                                    $contentData =  $contentData . "<td> <a class=\"btn btn-lg px-3 btn-info\" href=" . $mp3 . " role=\"button\">Download <img src=\"./images/download-arrow.png\" height=\"30\" alt=\"share button\"></a>";
+                                    $contentData =  $contentData . "</td>";
+                                    $contentData =  $contentData . "</tr>";
+                                    echo $contentData;
+                                }
+                            }
+                        }
+                    }
+                }
+                ?>
             </tbody>
         </table>
     </div>
