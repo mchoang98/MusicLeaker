@@ -64,6 +64,7 @@
 
         <!-- Lấy key words tìm kiếm được truyền vào -->
         <?php
+        error_reporting(0); // tắt hiện lỗi =)) 
         $key = "";
         $page = 1;
         if (!is_null($_GET["key"]) && !empty($_GET["key"])) {
@@ -93,10 +94,10 @@
         $str = file_get_contents("https://www.nhaccuatui.com/tim-kiem/bai-hat?q=" . urlencode($key) . "&b=keyword&l=tat-ca&s=default&page=1");
         $str = trim(preg_replace('/\s+/', ' ', $str)); // supports line breaks
         $str = trim(preg_replace('/\n+/', ' ', $str)); // supports line breaks
-        if (preg_match("/<span>(\(Có [0-9,]+ kết quả\))<\/span>/i", $str, $count)) // ignore case
-        {
-            $resultKey = $resultKey . " " . $count[1];
-        }
+        // if (preg_match("/<span>(\(Có [0-9,]+ kết quả\))<\/span>/i", $str, $count)) // ignore case
+        // {
+        //     $resultKey = $resultKey . " " . $count[1];
+        // }
     }
     ?>
 
@@ -107,7 +108,8 @@
         <table class="table table-bordered table-danger">
             <thead class="table-dark">
                 <tr>
-                    <th>#</th>
+                    <th>STT</th>
+                    <th>Ảnh</th>
                     <th>Tên ca sĩ</th>
                     <th>Tên bài hát</th>
                     <th>Chia sẻ</th>
@@ -117,7 +119,8 @@
             <tbody>
                 <!-- Khu lấy danh sách các bài hát -->
                 <?php
-                $contentData = "";
+                $stt = 1;
+                $gottedLinks = [];
                 if (!empty($str)) {
                     if (preg_match_all("/<li class=\"sn_search_single_song\">.*?<\/li>/m", $str, $matches, PREG_SET_ORDER, 0)) {
                         foreach ($matches as $li) {
@@ -149,23 +152,24 @@
                                     if (!is_null($got[2]) && !empty($got[2]))
                                         $img = $got[2];
                                     else
-                                        $img = './img/me.png';
+                                        $img = "./img/me.png"; // Ảnh của NGHĨA >>>>>>>>>>>>>>>>>>>>>>>>>>>>
                                 } else { }
+                            }
 
-                                // Combine data
-                                if (!empty($title) && !empty($singer) && !empty($img) && !empty($mp3)) {
-                                    $contentData =  $contentData . "<tr>";
-                                    $contentData =  $contentData . "<td> <img class=\"imagesong\" src=" . $img . ">";
-                                    $contentData =  $contentData . "</td>";
-                                    $contentData =  $contentData . "<td class=\"font-center\">" . $singer . "</td>";
-                                    $contentData =  $contentData . "<td>" . $title . "</td>";
-                                    $contentData =  $contentData . "<td> <a class=\"btn btn-lg px-3 btn-info\" href=\"#\" role=\"button\">Chia sẻ <img src=\"./images/share.png\" height=\"30\" alt=\"share button\"></a>";
-                                    $contentData =  $contentData . "</td>";
-                                    $contentData =  $contentData . "<td> <a class=\"btn btn-lg px-3 btn-info\" href=" . $mp3 . " role=\"button\">Download <img src=\"./images/download-arrow.png\" height=\"30\" alt=\"share button\"></a>";
-                                    $contentData =  $contentData . "</td>";
-                                    $contentData =  $contentData . "</tr>";
-                                    echo $contentData;
-                                }
+                            // Combine data
+                            if (!empty($title) && !empty($singer) && !empty($img) && !empty($mp3) && !in_array($link, $gottedLinks)) {
+                                echo "<tr>";
+                                echo "<td>" . $stt++ . "</td>";
+                                echo "<td> <img class=\"imagesong\" src=" . $img . ">";
+                                echo "</td>";
+                                echo "<td class=\"font-center\">" . $singer . "</td>";
+                                echo "<td>" . $title . "</td>";
+                                echo "<td> <a class=\"btn btn-lg px-3 btn-info\" href=\"#\" role=\"button\">Chia sẻ <img src=\"./images/share.png\" height=\"30\" alt=\"share button\"></a>";
+                                echo "</td>";
+                                echo "<td> <a class=\"btn btn-lg px-3 btn-info\" href=" . $mp3 . " role=\"button\">Download <img src=\"./images/download-arrow.png\" height=\"30\" alt=\"share button\"></a>";
+                                echo "</td>";
+                                echo "</tr>";
+                                array_push($gottedLinks, $link);
                             }
                         }
                     }
