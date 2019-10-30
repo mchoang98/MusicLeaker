@@ -65,8 +65,11 @@
         <!-- Lấy key words tìm kiếm được truyền vào -->
         <?php
         $key = "";
-        if (!is_null($_GET["key"]) && !empty($_GET[key])) {
+        if (!is_null($_GET["key"]) && !empty($_GET[key]) && strpos($_GET[key], 'http') !== false) {
             $key = $_GET["key"];
+        } else {
+            header("Location: ./index.html");
+            die();
         }
         ?>
         <!-- Kết thúc phần lấy keywords -->
@@ -146,11 +149,11 @@
     if (!empty($key)) {
         $songLink = "";
         $str = file_get_contents($fixedGetLinkUrl . $key);
-        print_r($fixedGetLinkUrl . $key);
         $str = trim(preg_replace('/\s+/', ' ', $str)); // supports line breaks
-        var_dump($songLink);
-        if (preg_match("/<a target=.+href=\"(.*)\">.+<\/a>/i", $str, $link)) // ignore case
+        if (preg_match("/<a target=.+href=\"{0,1}(.*)\"{0,1}?>.+?<\/a>/i", $str, $link)) // ignore case
+        {
             $songLink = $link[1];
+        } else { }
     }
     ?>
     <!-- Kết thúc phần leak nhạc -->
