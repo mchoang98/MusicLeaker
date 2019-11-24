@@ -50,8 +50,7 @@
             <div>
                 <a class="btn btn-danger fas fa-home button-height" style="
         padding-top: 15px;" href="./index.html"> Trang chủ</a>
-                <a class="btn btn-danger fas fa-arrow-circle-down button-height" style="
-        padding-top: 15px;" href="./download.html"> Tải xuống</a>
+   
                 <a class="btn btn-danger fas fa-user button-height" style="
          padding-top: 15px;" href="./SignIn.html"> Đăng nhập</a>
                 <a class="btn btn-danger fas fa-edit button-height" style="
