@@ -26,7 +26,7 @@
 # Trang đăng ký (Register)
 [![vqye9H.png](https://a.imge.to/2019/09/29/vqye9H.png)](https://imge.to/i/vqye9H)
 
-# Hàm
+# Hàm (Function)
  ## Hàm getKeyWord()
 - Input keyword
 - Output key no error
