@@ -65,6 +65,7 @@
  
  function getDetailSong()
    {
+   
     $stt = 1;
     $gottedLinks = [];
     if (!empty($this->str)) {
@@ -120,10 +121,11 @@
             }
         }
     }
+    
    }
    
    
-   # 
+   
    
    
    
