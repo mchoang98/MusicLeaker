@@ -20,7 +20,8 @@
 [![vqyDqU.png](https://b.imge.to/2019/09/29/vqyDqU.png)](https://imge.to/i/vqyDqU)
 
 # Trang tải (Download)
-[![vZlQvi.md.png](https://c.imge.to/2019/11/25/vZlQvi.md.png)](https://imge.to/i/vZlQvi)# Trang đăng nhập (Login)
+
+[![vZlfZV.md.png](https://a.imge.to/2019/11/25/vZlfZV.md.png)](https://imge.to/i/vZlfZV)
 
 # Trang đăng ký (Register)
 [![vqye9H.png](https://a.imge.to/2019/09/29/vqye9H.png)](https://imge.to/i/vqye9H)
