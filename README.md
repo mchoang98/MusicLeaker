@@ -30,8 +30,10 @@
  ## Hàm getKeyWord()
 - Input keyword
 - Output key no error
+ 
  function getKeyWord()
    { 
+   
     error_reporting(0); // tắt hiện lỗi =)) 
     if (!is_null($_GET["key"]) && !empty($_GET["key"])) {
         $this->key = $_GET["key"];
@@ -42,6 +44,7 @@
         header("Location: ./index.html");
         die();
     }
+    
    }
    
   ## Hàm getSongName()
@@ -50,6 +53,7 @@
   
   function getSongName()
    {
+   
     $resultKey = $th->key;
 
     echo $resultKey;
@@ -61,7 +65,6 @@
  
  function getDetailSong()
    {
-
     $stt = 1;
     $gottedLinks = [];
     if (!empty($this->str)) {
