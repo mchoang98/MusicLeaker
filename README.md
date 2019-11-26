@@ -1,4 +1,9 @@
 # Music Leaker - ỨNG DỤNG WEB TÌM KIẾM ÂM NHẠC MIỄN PHÍ - FREE FINDING SONG INTERNET
+## Cảm ơn đã ghé thăm, website vẫn chưa hoàn thiện, rất mong có sự giúp sức !
+
+## Tác giả: 
+- Nguyễn Trọng Nghĩa - Back End Developer (PHP, MySQL)
+- Hoàng Thiên Phú - Front End Developper (HTML, CSS, Javascripts, Bootstrap 4)
 
 ## Ngôn ngữ chính PHP, HTML, Javascripts, Bootstrap 4  ##
 
@@ -10,10 +15,10 @@
 
 
 
-# Dữ liệu vào (Input data)
-- Tên bài hát, tên ca sĩ, tên album.
+# Dữ liệu vào (Input data) - Nếu có thể hãy giúp chúng tôi hoàn thiện những tính năng *chưa hoàn thiện* bên dưới :point_down:
+- Tên bài hát, tên ca sĩ, tên album, (**chưa hoàn thiện**) Link Address , (**chưa hoàn thiện**) youtube link Address !
 # Dữ liệu ra (Output data)
-- Tên bài hát hoặc ca sĩ, bản nghe thử, link download và link share tới mạng xã hội
+- Tên bài hát hoặc ca sĩ, bản nghe thử (**chưa hoàn thiện**), link download và  (**link share tới mạng xã hội **)
 
 # Trang chủ (Index)
 
@@ -27,6 +32,10 @@
 [![vqye9H.png](https://a.imge.to/2019/09/29/vqye9H.png)](https://imge.to/i/vqye9H)
 
 # Hàm (Function)
+
+## *Chúng tôi viết các hàm này bên trong một class và gọi ra khi cần* 
+## *Các bạn có thể xem thêm ở file GetObject.php bên trên* 
+
  ## Hàm getKeyWord()
 - Input keyword
 - Output key no error
