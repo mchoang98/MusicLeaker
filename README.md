@@ -2,8 +2,8 @@
 ## Cảm ơn đã ghé thăm, website vẫn chưa hoàn thiện, rất mong có sự giúp sức !
 
 ## Tác giả: 
-- Nguyễn Trọng Nghĩa - Back End Developer (PHP, MySQL)
-- Hoàng Thiên Phú - Front End Developper (HTML, CSS, Javascripts, Bootstrap 4)
+- **Nguyễn Trọng Nghĩa** - Back End Developer (PHP, MySQL) - **[link to GitHub!](https://github.com/futureskyprojects)
+- **Hoàng Thiên Phú** - Front End Developper (HTML, CSS, Javascripts, Bootstrap 4, Git Manager) - **[link to GitHub!](https://github.com/mchoang98)
 
 ## Ngôn ngữ chính PHP, HTML, Javascripts, Bootstrap 4  ##
 
