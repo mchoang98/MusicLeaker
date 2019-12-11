@@ -1,6 +1,8 @@
 # Music Leaker - ỨNG DỤNG WEB TÌM KIẾM ÂM NHẠC MIỄN PHÍ - FREE FINDING SONG INTERNET
 ## Cảm ơn đã ghé thăm, website vẫn chưa hoàn thiện, rất mong có sự giúp sức !
 
+#  Mô tả bài toán
+
 #  Chức năng của Music Leaker
 - Tìm kiếm bài hát yêu thích.
 - Nghe và tải nhạc miễn phí.
@@ -12,7 +14,10 @@
 
 [![vqyDqU.png](https://b.imge.to/2019/09/29/vqyDqU.png)](https://imge.to/i/vqyDqU)
 
-
+## Hướng dẫn cài đặt 
+- Đầu tiên bạn clone project github về.
+- Dùng xampp hoặc wampp để chạy 
+- Nếu xampp dùng 
 
 
 
