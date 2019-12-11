@@ -16,9 +16,14 @@
 
 
 # Dữ liệu vào (Input data) - Nếu có thể hãy giúp chúng tôi hoàn thiện những tính năng *chưa hoàn thiện* bên dưới :point_down:
-- Tên bài hát, tên ca sĩ, tên album, (**chưa hoàn thiện**) Link Address , (**chưa hoàn thiện**) youtube link Address !
+- Tên bài hát, tên ca sĩ, tên album
+- (**chưa hoàn thiện**) Link Address 
+- (**chưa hoàn thiện**) youtube link Address !
 # Dữ liệu ra (Output data)
-- Tên bài hát hoặc ca sĩ, bản nghe thử (**chưa hoàn thiện**), link download và  (**link share tới mạng xã hội **)
+- Tên bài hát hoặc ca sĩ
+- Bản nghe thử (**chưa hoàn thiện**)
+- Link download 
+- Share tới mạng xã hội (**chưa hoàn thiện**)
 
 # Trang chủ (Index)
 
