@@ -62,13 +62,9 @@
 - Hiển thị phân loại nhạc, thể loại, dòng nhạc, top 10 ...
 - Dán link-address, địa chỉ album nhạc để tìm ra danh sách bài hát tự động
 - Dán vào link-youtube, tự động convert Youtube thành MP3 và hiển thị link download.
-- Phát triển thành một Chrome Extension tích hợp hỗ trợ người dùng tải nhanh ở các địa chỉ khác nhau.  
-   
-   
-   
-   
-   
-     <h3> Tác giả: </h3>
+- Phát triển thành một Chrome Extension tích hợp hỗ trợ người dùng tải nhanh ở các địa chỉ khác nhau.   
+
+<h3> Tác giả: </h3>
      
 - **Nguyễn Trọng Nghĩa** - Back End Developer (PHP, MySQL) - **[link to GitHub!](https://github.com/futureskyprojects)
 - **Hoàng Thiên Phú** - Front End Developper (HTML, CSS, Javascripts, Bootstrap 4, Git Manager) - **[link to GitHub!](https://github.com/mchoang98)
