@@ -50,11 +50,8 @@
 
 <p>- Thao tác</p>
 <ul>
-    <li> Nhập tên bài hát hiển thị kết quả/li>
-
+    <li> Nhập tên bài hát hiển thị kết quả </li>
     <li> Nhập tên ca sĩ hiển thị kết quả </li>
-
-
     <li> Nhấn nút download tải nhạc về máy</li>
 </ul>
 
