@@ -11,7 +11,7 @@
  <h3> Ứng dụng </h3>
  
  - Áp dụng cho các nhóm nhỏ, tổ chức phi lợi nhuận trong việc chia sẻ âm nhạc miễn phí.
- - Những người yêu thích sự tiện lợi , nhanh chóng trong việc nghe và tải nhạc
+ - Những người yêu thích sự tiện lợi , nhanh chóng trong việc nghe và tải nhạc 
  
 <h2> Mục đích của bài toán</h2>
 
@@ -23,6 +23,7 @@
 - Email, tài khoản, mật khẩu người dùng 
 
 <h3> Đầu ra </h3>
+
 - Danh sách bài hát
 - Bản nghe thử 
 - Link download 
@@ -67,7 +68,7 @@
    
    
    
-     ## Tác giả: 
+     <h3> Tác giả: </h3>  
 - **Nguyễn Trọng Nghĩa** - Back End Developer (PHP, MySQL) - **[link to GitHub!](https://github.com/futureskyprojects)
 - **Hoàng Thiên Phú** - Front End Developper (HTML, CSS, Javascripts, Bootstrap 4, Git Manager) - **[link to GitHub!](https://github.com/mchoang98)
    
