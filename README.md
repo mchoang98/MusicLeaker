@@ -29,7 +29,7 @@
 - Link download 
 - Share tới mạng xã hội 
 
-<h3> Các bước cài đặt</h3>
+<h2> Các bước cài đặt</h2>
 
 - Bước 1: Clone Responsity này về
 - Bước 2: Nếu dùng Xampp, Copy folder vừa clone về cho vào thư mục htdocs của Xampp.
@@ -41,7 +41,7 @@
 
 - Bước 5: Enter -> Taa.daa
 
-<h3> Nội dung của bài toán </h3>
+<h2> Nội dung của bài toán </h2>
 
 - Chức năng đã làm được:
 <p>- Thiết kế giao diện: Trang chủ, Đăng ký, Đăng nhập, Download</p>
@@ -58,7 +58,7 @@
     <li> Nhấn nút download tải nhạc về máy</li>
 </ul>
 
-<h3> Hướng phát triển cho bài toán</h3>
+<h2> Hướng phát triển cho bài toán</h2>
 - Hiển thị phân loại nhạc, thể loại, dòng nhạc, top 10 ...
 - Dán link-address, địa chỉ album nhạc để tìm ra danh sách bài hát tự động
 - Dán vào link-youtube, tự động convert Youtube thành MP3 và hiển thị link download.
