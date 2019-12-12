@@ -1,4 +1,15 @@
 # Music Leaker - ỨNG DỤNG WEB TÌM KIẾM ÂM NHẠC MIỄN PHÍ - FREE FINDING SONG INTERNET
+
+[![Platform](https://img.shields.io/badge/platform-PHP-blue
+)](https://www.php.net/downloads.php)
+[![Laguage](https://img.shields.io/badge/WEB-HTML-green
+)](https://www.php.net/downloads.php)
+[![Laguage](https://img.shields.io/badge/Style-CSS-red
+)](https://developer.mozilla.org/vi/docs/Web/CSS)
+[![Laguage](https://img.shields.io/badge/WEB-javascripts-9cf
+)](https://www.php.net/downloads.php)
+
+
 ♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬
 <h2> ✈ Công dụng, ứng dụng  </h2>
 <h3> Công dụng </h3>
