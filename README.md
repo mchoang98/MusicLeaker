@@ -13,7 +13,7 @@
  - Áp dụng cho các nhóm nhỏ, tổ chức phi lợi nhuận trong việc chia sẻ âm nhạc miễn phí.
  - Những người yêu thích sự tiện lợi , nhanh chóng trong việc nghe và tải nhạc 
  
-<h2> Mục đích của bài toán</h2>
+<h2>☝ Mục đích của bài toán</h2>
 
 <h3> Đầu vào</h3>
 
@@ -29,7 +29,7 @@
 - Link download 
 - Share tới mạng xã hội 
 
-<h2> Các bước cài đặt</h2>
+<h2>⚙ Các bước cài đặt</h2>
 
 - Bước 1: Clone Responsity này về
 - Bước 2: Nếu dùng Xampp, Copy folder vừa clone về cho vào thư mục htdocs của Xampp.
@@ -41,7 +41,7 @@
 
 - Bước 5: Enter -> Taa.daa
 
-<h2> Nội dung của bài toán </h2>
+<h2>📑 Nội dung của bài toán </h2>
 
 - Chức năng đã làm được:
 <p>- Thiết kế giao diện: Trang chủ, Đăng ký, Đăng nhập, Download</p>
@@ -57,13 +57,13 @@
 
 [![vAyYAf.png](https://c.imge.to/2019/12/12/vAyYAf.png)](https://imge.to/i/vAyYAf)
 
-<h2> Hướng phát triển cho bài toán</h2>
+<h2>💻 Hướng phát triển cho bài toán</h2>
 - Hiển thị phân loại nhạc, thể loại, dòng nhạc, top 10 ...
 - Dán link-address, địa chỉ album nhạc để tìm ra danh sách bài hát tự động
 - Dán vào link-youtube, tự động convert Youtube thành MP3 và hiển thị link download.
 - Phát triển thành một Chrome Extension tích hợp hỗ trợ người dùng tải nhanh ở các địa chỉ khác nhau.   
 
-<h3> Tác giả: </h3>
+<h2>👦 Tác giả: </h3>
      
 - **Nguyễn Trọng Nghĩa** - Back End Developer (PHP, MySQL) - **[link to GitHub!](https://github.com/futureskyprojects)
 - **Hoàng Thiên Phú** - Front End Developper (HTML, CSS, Javascripts, Bootstrap 4, Git Manager) - **[link to GitHub!](https://github.com/mchoang98)
