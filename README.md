@@ -4,10 +4,12 @@
 )](https://www.php.net/downloads.php)
 [![Laguage](https://img.shields.io/badge/WEB-HTML-green
 )](https://www.php.net/downloads.php)
-[![Laguage](https://img.shields.io/badge/Style-CSS-red
+[![Language](https://img.shields.io/badge/Style-CSS-red
 )](https://developer.mozilla.org/vi/docs/Web/CSS)
-[![Laguage](https://img.shields.io/badge/WEB-javascripts-9cf
+[![Language](https://img.shields.io/badge/WEB-javascripts-9cf
 )](https://www.php.net/downloads.php)
+[![DB](https://img.shields.io/badge/DB-MYSQL-information
+)](https://www.mysql.com/)
 
 
 ♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬♫♭♮♯♫♬
