@@ -79,8 +79,8 @@
 
 <h2>👦 Tác giả: </h3>
      
-- **Nguyễn Trọng Nghĩa** - Back End Developer (PHP, MySQL) - **[link to GitHub!](https://github.com/futureskyprojects)
-- **Hoàng Thiên Phú** - Front End Developper (HTML, CSS, Javascripts, Bootstrap 4, Git Manager) - **[link to GitHub!](https://github.com/mchoang98)
+- **Nguyễn Trọng Nghĩa** - Back End Developer (PHP, MySQL) -  [link to GitHub!](https://github.com/futureskyprojects)
+- **Hoàng Thiên Phú** - Front End Developper (HTML, CSS, Javascripts, Bootstrap 4, Git Manager) - [link to GitHub!](https://github.com/mchoang98)
    
    
    
